@@ -29,7 +29,6 @@ export default handleActions<ITodoState>(
             });
         },
         [actionTypes.TOGGLE_TODO]: (state, action) => {
-            debugger;
             let { todos } = state;
             let { payload = "" } = action;
             let index = todos.findIndex(

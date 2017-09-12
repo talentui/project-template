@@ -36,7 +36,7 @@ export default connect<ITodoState, ITodoHanler, {}>(
             filter
         };
     },
-    (disptach) => {
+    (disptach):any => {
         let acs = bindActionCreators({
             onDelete:  actions.deleteTodo,
             onAdd: actions.addTodo,
