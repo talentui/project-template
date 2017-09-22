@@ -1,18 +1,16 @@
 {
-  "name": "talent-ui-2.0-project-template",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "author": {
-    "name": "QD-FED-Team",
-    "email": "liguoming@beisen.com"
-  },
-  "maintainers": [
-    {
-      "name": "yangfengchu",
-      "email": "yangfengchu@beisen.com"
-    }
-  ],
+    "name": "talent-ui-2.0-project-template",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "author": {
+        "name": "UPAAS FED TEAM",
+        "email": "liguoming@beisen.com"
+    },
+    "maintainers": [{
+        "name": "yangfengchu",
+        "email": "yangfengchu@beisen.com"
+    }],
   "scripts": {
     "start": "dev_server=on webpack-dev-server ",
     "build": "rm -rf dist/ && webpack",

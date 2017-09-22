@@ -5,7 +5,7 @@ import { DELETE, ADD, EDIT, FILTER, TOGGLE_TODO } from "./const";
 
 const { createAction } = ReduxActions;
 
-export const addTodo = createAction<ITodoItem, string>(ADD, contents => {
+export const addTodo = createAction<ITodoItem, string>(ADD, (contents:string) => {
     return {
         contents,
         id: uuid.v1(),
