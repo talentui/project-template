@@ -1,23 +1,26 @@
 {
-    "name": "talent-ui-2.0-project-template",
-    "version": "1.0.0",
-    "main": "index.js",
-    "license": "MIT",
-    "author": {
-        "name": "UPAAS FED TEAM",
-        "email": "liguoming@beisen.com"
-    },
-    "maintainers": [{
-        "name": "yangfengchu",
-        "email": "yangfengchu@beisen.com"
-    }],
+  "name": "talent-ui-2.0-project-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "UPAAS FED TEAM",
+    "email": "liguoming@beisen.com"
+  },
+  "maintainers": [
+    {
+      "name": "yangfengchu",
+      "email": "yangfengchu@beisen.com"
+    }
+  ],
   "scripts": {
     "start": "dev_server=on webpack-dev-server ",
     "build": "rm -rf dist/ && webpack",
     "build-prod": "rm -rf dist/* && NODE_ENV=production webpack",
     "analysis": "analyzer_server=on yarn run build",
     "debug": "node --inspect --debug-brk node_modules/.bin/webpack",
-    "debug-dev": "DEV_SERVER=on node --inspect --debug-brk node_modules/.bin/webpack-dev-server"
+    "debug-dev": "DEV_SERVER=on node --inspect --debug-brk node_modules/.bin/webpack-dev-server",
+    "test": "jest"
   },
   "dependencies": {
     "@beisen/talent-ui-bootstrap": "^1.0.14",
@@ -31,14 +34,20 @@
     "uuid": "^3.1.0"
   },
   "devDependencies": {
+    "@beisen/talent-ui-jest-utils": "^1.0.7",
     "@beisen/talent-ui-webpack-config": "^2.2.1",
+    "@types/enzyme": "^2.8.8",
+    "@types/jest": "^20.0.8",
     "@types/react": "^16.0.5",
     "@types/react-dom": "^15.5.4",
     "@types/react-redux": "^5.0.8",
     "@types/react-router-dom": "^4.0.7",
     "@types/redux-actions": "^2.2.0",
     "@types/uuid": "^3.4.2",
+    "enzyme": "^2.9.1",
     "eslint": "^4.6.1",
+    "jest": "^21.1.0",
+    "react-test-renderer": "^15.6.1",
     "tslint": "^5.7.0",
     "typescript": "^2.5.2",
     "webpack": "^3.5.6",
