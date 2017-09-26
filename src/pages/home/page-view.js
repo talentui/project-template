@@ -4,7 +4,7 @@ import * as actions from "&/reducers/home/actions";
 import { bindActionCreators } from "redux";
 import "./home.scss";
 import { Link } from "react-router-dom";
-import warning from '@beisen/talent-ui-helper/lib/utils/warning';
+import warning from "@beisen/talent-ui-helper/lib/utils/warning";
 
 @connect(
     state => {
@@ -21,7 +21,7 @@ export default class Home extends Component {
         this.counter = setInterval(() => {
             let { increase } = this.props;
             increase();
-        }, 1000);
+        }, 10000);
     }
 
     componentWillUnmount() {
@@ -29,17 +29,20 @@ export default class Home extends Component {
     }
 
     render() {
-        let { data, increase } = this.props;
-
+        let { data, increase, children } = this.props;
         return (
-            <div onClick={increase} className="home-page">
+            <div className="home-page">
                 <div>
                     <div> 你是否看到了时间的流失：{data} </div>
-                    <Link to="/home/love">
-                        爱自己，爱这个世界
-                    </Link>
+                    <Link to="/home/love">爱自己，爱这个世界</Link>
+                    <div className="tabs">
+                        <div>
+                            <Link to="/home/~/tab1">Tab1</Link>
+                            <Link to="/home/~/tab2">Tab2</Link>
+                        </div>
+                        <div>{children}</div>
+                    </div>
                 </div>
-
             </div>
         );
     }

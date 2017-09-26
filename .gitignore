@@ -57,3 +57,4 @@ src/@beisen/
 .awcache/
 
 yarn.lock
+src/venders
