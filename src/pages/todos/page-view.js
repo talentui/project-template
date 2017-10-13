@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import TodoFilter from "./todo-filter";
 import TodoHeader from "./todo-header";
 import TodoList from "./todo-list";
-import mapActionCreators from "@beisen/talent-ui-helper/lib/utils/mapActionCreators";
+import mapActionCreators from "@talentui/biz-helper/lib/utils/mapActionCreators";
 import actions from "&/reducers/todos/actions";
 import todoCss from "./todos.scss";
-import warning from '@beisen/talent-ui-helper/lib/utils/warning';
+import warning from '@talentui/biz-helper/lib/utils/warning';
 
 @connect(state => ({ data: state.todos }), mapActionCreators(actions))
 export default class Todos extends Component {

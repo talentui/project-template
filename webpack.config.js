@@ -1,7 +1,7 @@
 const path = require('path');
-module.exports = require('@beisen/talent-ui-webpack-config')({
+module.exports = require('@talentui/webpack-config')({
     entry: './app.js', //必须，应用程序入口，可以使用talent-ui-bootstrap
-    dllList: ['@beisen/talent-ui-dll-foundation'], //可选，dll列表，
+    dllList: ['@talentui/dll-react'], //可选，dll列表，
     useLint: false, //可选， 是否启用lint检查
     moduleScope: './src',
     language: 'mixed', //可选，default 'js' 可选 'ts', 'mixed',

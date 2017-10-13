@@ -1,2 +1,2 @@
 import 'babel-polyfill';
-import '@beisen/talent-ui-bootstrap';
+import '@talentui/bootstrap-react';

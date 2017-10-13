@@ -1,5 +1,5 @@
 {
-    "extends": "./node_modules/@beisen/talent-ui-helper/lib/config/ts.json",
+    "extends": "./node_modules/@talentui/tools/typescript/ts.json",
     "compilerOptions": {
       "baseUrl": "./"
     },

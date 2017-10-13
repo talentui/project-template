@@ -1,4 +1,4 @@
-module.exports = require('@beisen/talent-ui-jest-utils')({
+module.exports = require('@talentui/tools/jest')({
     globals: {
         BSGlobal: {
             loginUserInfo: {

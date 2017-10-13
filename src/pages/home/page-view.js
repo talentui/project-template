@@ -4,7 +4,6 @@ import * as actions from "&/reducers/home/actions";
 import { bindActionCreators } from "redux";
 import "./home.scss";
 import { Link } from "react-router-dom";
-import warning from "@beisen/talent-ui-helper/lib/utils/warning";
 
 @connect(
     state => {
