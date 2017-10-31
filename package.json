@@ -1,12 +1,9 @@
 {
-  "name": "talent-ui-2.0-project-template",
+  "name": "{{ name }}",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "author": {
-    "name": "UPAAS FED TEAM",
-    "email": "liguoming@beisen.com"
-  },
+  "author": "{{ author }}",
   "maintainers": [
     {
       "name": "yangfengchu",
