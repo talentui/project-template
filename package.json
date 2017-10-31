@@ -34,8 +34,8 @@
     "uuid": "^3.1.0"
   },
   "devDependencies": {
-    "@talentui/tools": "^1.0.0",
-    "@talentui/webpack-config": "^1.0.0",
+    "@talentui/tools": "^1.0.4",
+    "@talentui/webpack-config": "^1.1.0",
     "@types/enzyme": "^2.8.8",
     "@types/jest": "^20.0.8",
     "@types/react": "^16.0.5",
@@ -47,7 +47,7 @@
     "@types/uuid": "^3.4.2",
     "enzyme": "^2.9.1",
     "eslint": "^4.6.1",
-    "jest": "^21.1.0",
+    "jest": "^21.2.1",
     "react-test-renderer": "^15.6.1",
     "tslint": "^5.7.0",
     "typescript": "^2.5.2",
