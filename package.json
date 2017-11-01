@@ -1,15 +1,9 @@
 {
   "name": "{{ name }}",
-  "version": "1.0.0",
+  "version": "{{ version }}",
   "main": "index.js",
   "license": "MIT",
   "author": "{{ author }}",
-  "maintainers": [
-    {
-      "name": "yangfengchu",
-      "email": "yangfengchu@beisen.com"
-    }
-  ],
   "scripts": {
     "start": "dev_server=on webpack-dev-server ",
     "build": "rm -rf dist/ && webpack",
