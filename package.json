@@ -1,18 +1,18 @@
 {
-  "name": "talent-ui-2.0-project-template",
-  "version": "1.0.0",
+  "name": "{{ name }}",
+  "version": "{{ version }}",
   "main": "index.js",
   "license": "MIT",
-  "author": {
-    "name": "UPAAS FED TEAM",
-    "email": "liguoming@beisen.com"
+  "author": "{{ author }}",
+  "description": "{{ description }}",
+  "repository": {
+    "type": "{{ repository-type }}",
+    "url": "{{ repository-url }}"
   },
-  "maintainers": [
-    {
-      "name": "yangfengchu",
-      "email": "yangfengchu@beisen.com"
-    }
-  ],
+  "bugs": {
+    "url": "{{ bugs-url }}"
+  },
+  "homepage": "{{ homePage }}",
   "scripts": {
     "start": "dev_server=on webpack-dev-server ",
     "build": "rm -rf dist/ && webpack",
