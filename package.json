@@ -5,6 +5,14 @@
   "license": "MIT",
   "author": "{{ author }}",
   "description": "{{ description }}",
+  "repository": {
+    "type": "{{ repository-type }}",
+    "url": "{{ repository-url }}"
+  },
+  "bugs": {
+    "url": "{{ bugs-url }}"
+  },
+  "homepage": "{{ homePage }}",
   "scripts": {
     "start": "dev_server=on webpack-dev-server ",
     "build": "rm -rf dist/ && webpack",
