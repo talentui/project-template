@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "author": "{{ author }}",
+  "description": "{{ description }}",
   "scripts": {
     "start": "dev_server=on webpack-dev-server ",
     "build": "rm -rf dist/ && webpack",
