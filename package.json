@@ -1,18 +1,18 @@
 {
-  "name": "{{ name }}",
-  "version": "{{ version }}",
+  "name": "talent-ui-2.0-project-template",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "author": "{{ author }}",
-  "description": "{{ description }}",
+  "author": "Guoming Li <it1011@qq.com> (http://lixinchi.com/)",
+  "description": "talentui 2.0 的模版项目",
   "repository": {
-    "type": "{{ repository-type }}",
-    "url": "{{ repository-url }}"
+    "type": "git",
+    "url": "https://github.com/talentui/project-template"
   },
   "bugs": {
-    "url": "{{ bugs-url }}"
+    "url": "https://github.com/talentui/project-template/issues"
   },
-  "homepage": "{{ homePage }}",
+  "homepage": "https://github.com/talentui/project-template/blob/master/README.md",
   "scripts": {
     "start": "dev_server=on webpack-dev-server ",
     "build": "rm -rf dist/ && webpack",
@@ -20,7 +20,8 @@
     "analysis": "analyzer_server=on yarn run build",
     "debug": "node --inspect --debug-brk node_modules/.bin/webpack",
     "debug-dev": "DEV_SERVER=on node --inspect --debug-brk node_modules/.bin/webpack-dev-server",
-    "test": "jest"
+    "test": "jest",
+    "commit": "git-cz"
   },
   "dependencies": {
     "@talentui/biz-helper": "^1.0.0",
@@ -45,6 +46,8 @@
     "@types/react-test-renderer": "^15.5.4",
     "@types/redux-actions": "^2.2.0",
     "@types/uuid": "^3.4.2",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
     "enzyme": "^2.9.1",
     "eslint": "^4.6.1",
     "jest": "^21.2.1",
@@ -53,5 +56,10 @@
     "typescript": "^2.5.2",
     "webpack": "^3.5.6",
     "webpack-dev-server": "^2.7.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
