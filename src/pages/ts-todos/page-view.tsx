@@ -29,7 +29,7 @@ class TSTodos extends React.Component<
 }
 
 export default connect<ITodoState, ITodoHanler, {}>(
-    state => {
+    (state:any) => {
         let { tsTodos: { todos, filter } } = state;
         return {
             todos,
