@@ -17,7 +17,7 @@
     "start": "dev_server=on webpack-dev-server ",
     "build": "rm -rf dist/ && webpack",
     "build-prod": "rm -rf dist/* && NODE_ENV=production webpack",
-    "analysis": "analyzer_server=on yarn run build",
+    "analysis": "analysis=on yarn run build",
     "debug": "node --inspect --debug-brk node_modules/.bin/webpack",
     "debug-dev": "DEV_SERVER=on node --inspect --debug-brk node_modules/.bin/webpack-dev-server",
     "test": "jest",
