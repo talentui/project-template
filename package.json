@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/talentui/project-template/blob/master/README.md",
   "scripts": {
-    "start": "dev_server=on webpack-dev-server ",
+    "start": "webpack-dev-server ",
     "build": "webpack",
     "build-prod": "NODE_ENV=production webpack",
     "analysis": "analysis=on yarn run build",
