@@ -26,9 +26,9 @@
   "dependencies": {
     "@talentui/biz-helper": "^1.0.1",
     "@talentui/bootstrap-react": "^1.0.1",
-    "@talentui/dll-react": "15.6.10",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2",
+    "@talentui/dll-react": "16.1.6",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux-actions": "^2.2.1",
