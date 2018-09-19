@@ -1,8 +1,12 @@
 import React from "react";
 import ReactDom from 'react-dom';
 import renderer from 'react-test-renderer';
+import Adapter from 'enzyme-adapter-react-15';
+
 import TodoItem from '&/pages/todos/todo-item';
-import {mount} from 'enzyme';
+
+import {mount, configure} from 'enzyme';
+configure({adapter: new Adapter()});
 
 describe('测试js版本todoItem', () => {
 

@@ -20,7 +20,7 @@ export default class Home extends Component {
         this.counter = setInterval(() => {
             let { increase } = this.props;
             increase();
-        }, 10000);
+        }, 1000);
     }
 
     componentWillUnmount() {
