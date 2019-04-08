@@ -1,9 +1,9 @@
 {
-  "name": "talent-ui-2.0-project-template",
+  "name": "talent-ui-project-template",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "author": "Guoming Li <it1011@qq.com> (http://lixinchi.com/)",
+  "author": "Guoming Li <it1011@qq.com> (https://lixinchi.com:886/)",
   "description": "talentui 2.0 的模版项目",
   "repository": {
     "type": "git",
@@ -20,46 +20,28 @@
     "analysis": "analysis=on yarn run build",
     "debug": "node --inspect --debug-brk node_modules/.bin/webpack",
     "debug-dev": "DEV_SERVER=on node --inspect --debug-brk node_modules/.bin/webpack-dev-server",
-    "test": "jest",
+    "test": "echo 没有配置",
     "commit": "git-cz"
   },
   "dependencies": {
-    "@talentui/biz-helper": "^1.0.1",
     "@talentui/bootstrap-react": "^1.0.1",
-    "@talentui/dll-react": "16.1.6",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
-    "react-router-dom": "^4.2.2",
-    "redux-actions": "^2.2.1",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0",
-    "uuid": "^3.1.0",
-    "redux": "^3.6.0"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1"
   },
   "devDependencies": {
-    "@talentui/cz-project-changelog": "0.0.0-development",
-    "@talentui/tools": "^1.0.4",
-    "@talentui/webpack-config": "^4.0.0",
-    "@types/enzyme": "^3.1.5",
-    "@types/enzyme-adapter-react-15": "^1.0.2",
-    "@types/jest": "^21.1.8",
-    "@types/react": "*",
-    "@types/react-dom": "*",
+    "@talentui/webpack-config": "^4.1.2-beta.2",
+    "@types/react": "^16.8.13",
+    "@types/react-dom": "^16.8.3",
     "@types/react-redux": "^6.0.2",
-    "@types/react-router-dom": "^4.2.3",
-    "@types/react-test-renderer": "*",
-    "@types/redux-actions": "^2.2.3",
-    "@types/uuid": "^3.4.3",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/redux": "^3.6.0",
     "commitizen": "^2.9.6",
-    "enzyme": "^3.2.0",
-    "enzyme-adapter-react-15": "^1.0.6",
-    "eslint": "^4.13.1",
-    "jest": "^21.2.1",
+    "cz-conventional-changelog": "^2.1.0",
     "node-sass": "^4.9.2",
-    "react-test-renderer": "^15.6.2",
     "sass-loader": "^7.0.3",
-    "tslint": "^5.8.0",
     "typescript": "^2.6.2",
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0",
@@ -67,7 +49,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/@talentui/cz-project-changelog"
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
