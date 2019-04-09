@@ -17,7 +17,7 @@ export default class TodoItem extends React.Component<ITodoItemProps, {}>{
     
     render(){
         return <li className="todo-item" onClick={this.handleToggleTodo(this.props.id)}>
-            <input checked={this.props.finished} type='checkbox' />
+            <input checked={this.props.finished} type='checkbox' readOnly />
             {this.props.contents}
             <a className="btn-remove" href="javascript:;" onClick={this.handleDeleteTodo(this.props.id)}>xxx</a>
         </li>

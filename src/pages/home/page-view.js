@@ -28,19 +28,12 @@ export default class Home extends Component {
     }
 
     render() {
-        let { data, increase, children } = this.props;
+        let { data } = this.props;
         return (
             <div className="home-page">
                 <div>
                     <div> 你是否看到了时间的流失：{data} </div>
                     <Link to="/home/love">爱自己，爱这个世界</Link>
-                    <div className="tabs">
-                        <div>
-                            <Link to="/home/~/tab1">Tab1</Link>
-                            <Link to="/home/~/tab2">Tab2</Link>
-                        </div>
-                        <div>{children}</div>
-                    </div>
                 </div>
             </div>
         );
