@@ -1,5 +1,5 @@
-import * as React from 'react';
-import {ITodoFooterHandler, EFILTER} from '&/interfaces/i-todos';
+import React from 'react';
+import {ITodoFooterHandler, EFILTER} from '../../interfaces/i-todos';
 
 export default class TodoFooter extends React.Component<ITodoFooterHandler>{
 

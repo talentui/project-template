@@ -1,7 +1,7 @@
 {
   "name": "talent-ui-project-template",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "2.0.0",
+  "main": "./src/app.js",
   "license": "MIT",
   "author": "Guoming Li <it1011@qq.com> (https://lixinchi.com:886/)",
   "description": "talentui 2.0 的模版项目",
@@ -17,35 +17,42 @@
     "start": "webpack-dev-server",
     "build": "webpack",
     "build-prod": "NODE_ENV=production webpack",
-    "analysis": "analysis=on yarn run build",
+    "analysis": "analysis=on npm run build",
     "debug": "node --inspect --debug-brk node_modules/.bin/webpack",
     "debug-dev": "DEV_SERVER=on node --inspect --debug-brk node_modules/.bin/webpack-dev-server",
     "test": "echo 没有配置",
     "commit": "git-cz"
   },
   "dependencies": {
-    "@talentui/bootstrap-react": "^1.0.1",
+    "@babel/runtime": "^7.4.3",
+    "@talentui/biz-helper": "^2.0.0",
+    "@talentui/bootstrap-react": "^2.0.0-beta.0",
+    "core-js": "^2.6.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^6.0.1",
     "react-router-dom": "^4.3.1",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "redux-actions": "^2.6.5",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "@talentui/webpack-config": "^4.1.2-beta.2",
+    "@talentui/webpack-config": "^4.1.2-beta.5",
     "@types/react": "^16.8.13",
     "@types/react-dom": "^16.8.3",
     "@types/react-redux": "^6.0.2",
     "@types/react-router-dom": "^4.3.1",
     "@types/redux": "^3.6.0",
+    "@types/redux-actions": "^2.6.0",
+    "@types/uuid": "^3.4.4",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
     "node-sass": "^4.9.2",
     "sass-loader": "^7.0.3",
     "typescript": "^2.6.2",
-    "webpack": "^4.16.3",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "webpack": "4.28.4",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
   },
   "config": {
     "commitizen": {

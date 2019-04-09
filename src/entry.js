@@ -1,6 +1,6 @@
 import  * as React from "react";
-import Header from "&/components/common/header";
-import Footer from "&/components/common/footer";
+import Header from "./components/common/header";
+import Footer from "./components/common/footer";
 
 /**
  * 必需！！

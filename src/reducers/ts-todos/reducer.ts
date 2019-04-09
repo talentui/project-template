@@ -1,10 +1,8 @@
-import { ITodoState, EFILTER, ITodoItem } from "&/interfaces/i-todos";
-import * as uuid from "uuid";
+import { ITodoState, EFILTER, ITodoItem } from "../../interfaces/i-todos";
+import {v1} from "uuid";
 import * as actionTypes from "./const";
-import * as ReduxActions from "redux-actions";
-const { handleActions } = ReduxActions;
+import {handleActions} from "redux-actions";
 
-const { v1 } = uuid;
 
 const todoInitState: ITodoState = {
     filter: EFILTER.All,

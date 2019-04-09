@@ -1,16 +1,15 @@
-import * as React from "react";
-import * as ReactRedux from "react-redux";
+import React from "react";
+import {connect} from "react-redux";
 import TodoList from "./todo-list";
 import TodoHeader from './todo-header';
 import TodoFooter from './todo-footer';
 import {bindActionCreators} from 'redux';
 import './ts-todos.scss';
-const { connect } = ReactRedux;
 import {
     ITodoState,
     ITodoHanler
-} from "&/interfaces/i-todos";
-import * as actions from "&/reducers/ts-todos/actions";
+} from "../../interfaces/i-todos";
+import * as actions from "../../reducers/ts-todos/actions";
 
 class TSTodos extends React.Component<
     ITodoState & ITodoHanler,

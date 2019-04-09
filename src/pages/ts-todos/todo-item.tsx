@@ -1,5 +1,5 @@
-import * as React from 'react';
-import {ITodoItemProps, IHOFCommonEvent, IHOFInputEvent} from '&/interfaces/i-todos';
+import React from 'react';
+import {ITodoItemProps, IHOFCommonEvent, IHOFInputEvent} from '../../interfaces/i-todos';
 
 export default class TodoItem extends React.Component<ITodoItemProps, {}>{
 
@@ -12,7 +12,6 @@ export default class TodoItem extends React.Component<ITodoItemProps, {}>{
     }
 
     handleToggleTodo = (id:string) => () => {
-        debugger;
         this.props.onToggleTodo(id);
     }
     

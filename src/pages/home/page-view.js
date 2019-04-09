@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import * as actions from "&/reducers/home/actions";
+import * as actions from "../../reducers/home/actions";
 import { bindActionCreators } from "redux";
 import "./home.scss";
 import { Link } from "react-router-dom";

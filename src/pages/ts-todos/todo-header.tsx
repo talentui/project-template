@@ -1,5 +1,5 @@
-import * as React from "react";
-import { ITodoHeaderHandler } from "&/interfaces/i-todos";
+import React from "react";
+import { ITodoHeaderHandler } from "../../interfaces/i-todos";
 
 export default class TodoHeader extends React.Component<
     ITodoHeaderHandler,

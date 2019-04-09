@@ -1,5 +1,5 @@
 import * as ReduxActions from "redux-actions";
-import { ITodoItem, EFILTER } from "&/interfaces/i-todos";
+import { ITodoItem, EFILTER } from "../../interfaces/i-todos";
 import * as uuid from "uuid";
 import { DELETE, ADD, EDIT, FILTER, TOGGLE_TODO } from "./const";
 

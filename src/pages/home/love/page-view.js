@@ -1,6 +1,6 @@
 import React from 'react';
 import './love.scss';
-import img from '&/assets/img/love.jpg'
+import img from '../../../assets/img/love.jpg'
 
 export default props => {
     return <div className='love-page'>

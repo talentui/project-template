@@ -1,5 +1,4 @@
-import reduxThunk from "redux-thunk";
-import logger from "redux-logger";
+// import reduxThunk from "redux-thunk";
 //应用配置文件，这个文件是必须存在的，但是配置可以为空，可以对项目运行时进行一些配置，比如，配置应用的初始state, redux中间件
 /**
  * 导出对象 应用配置，作为业务的扩展点
@@ -10,7 +9,6 @@ import logger from "redux-logger";
  *  @...：   如果有什么需求可以提给liguoming@beisen.com，
  */
 const config = {
-    middlewares: [reduxThunk, logger],
     afterCreateStore: function(store) {
         console.log("store created");
     },

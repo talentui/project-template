@@ -2,14 +2,9 @@ import * as React from "react";
 import * as ReactRouterDom from "react-router-dom";
 import "./header.scss"; 
 
-interface Props {
-    name: string,
-    title: number
-}
-
 const {Link} = ReactRouterDom;
 
-export default class Header extends React.Component<Props, {}> {
+export default class Header extends React.Component {
     render() {
         return (
             <div id="header-region">
