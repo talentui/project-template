@@ -42,11 +42,14 @@ if (module.hot) {
 
 ## 布局组件
 
-[布局组件](./src/layout.js)是指应用的布局模块，所有的页面共享这一布局，如果想关闭布局，可以在布局组件中直接返回 **props.children**， 如果想在某一个页面上关闭布局，可以设置组件的 静态属性，**useLayout=false**
+[布局组件](./src/components/common/layout.js)是指应用的布局模块，所有的页面共享这一布局，
 
-**因为 bootstrap-react 会直接 import 布局组件，所以这个文件必须存在，原来尝试过在 config 中通过参数传递布局组件，但是会打乱组件的依赖关系，导致热更新失效，权衡之下，选择了当前的方式**
+### 如何关闭布局
+**关闭单个页面的布局** 如果想在某一个页面上关闭布局，可以设置组件的 静态属性，**static useLayout=false**
+**关闭所有页面布局** app.config的时候不传布局组件的配置就行了
 
 ```js
+//布局组件示例
 import React from 'react';
 export default class Layout extends React.Component {
   render() {
@@ -60,9 +63,13 @@ export default class Layout extends React.Component {
 }
 ```
 
+## 加载组件
+
+## 错误组件
+
 ## 页面
 
-在项目的 pages 目录下创建子目录，并且在子目录下创建一个[page-view.js](./src/pages/home/page-view.js)，就会自动生成#/dirname 的路由上对应的一个页面，这个页面会成为[布局组件](./src/layout.js)的**children**，
+在项目的 pages 目录下创建子目录，并且在子目录下创建一个[page-view.js](./src/pages/home/page-view.js)，就会自动生成#/dirname 的路由上对应的一个页面，这个页面会成为[布局组件](./src/components/common/layout.js)的**children**，
 
 **如果在 page-view.js 导出的组件上设置静态属性 useLayout=false,则不会显示布局**
 
