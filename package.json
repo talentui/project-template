@@ -26,7 +26,7 @@
   "dependencies": {
     "@babel/runtime": "^7.4.3",
     "@talentui/biz-helper": "^2.0.0",
-    "@talentui/bootstrap-react": "^2.0.0-beta.3",
+    "@talentui/bootstrap-react": "^2.0.2",
     "core-js": "^2.6.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -45,7 +45,7 @@
     "@types/redux": "^3.6.0",
     "@types/redux-actions": "^2.6.0",
     "@types/uuid": "^3.4.4",
-    "commitizen": "^2.9.6",
+    "commitizen": "^3.0.7",
     "cz-conventional-changelog": "^2.1.0",
     "node-sass": "^4.9.2",
     "sass-loader": "^7.0.3",

@@ -28,12 +28,13 @@ export default class Home extends Component {
     }
 
     render() {
+        
         let { data } = this.props;
         return (
             <div className="home-page">
                 <div>
                     <div> 你是否看到了时间的流失：{data} </div>
-                    <Link to="/home/love">爱自己，爱这个世界</Link>
+                    <Link to="/home/love">爱自己123，爱这个世界</Link>
                 </div>
             </div>
         );
