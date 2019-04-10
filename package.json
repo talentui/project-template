@@ -26,7 +26,7 @@
   "dependencies": {
     "@babel/runtime": "^7.4.3",
     "@talentui/biz-helper": "^2.0.0",
-    "@talentui/bootstrap-react": "^2.0.2",
+    "@talentui/bootstrap-react": "^2.1.1",
     "core-js": "^2.6.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

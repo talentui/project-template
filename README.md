@@ -11,13 +11,22 @@ import app from '@talentui/bootstrap-react';
 import reducer from './reducers';
 
 app.config({
-  el: '#bsMain', // 应用挂载点，可以是querySelector的选择器，或者是dom节点 //必须传
-  reducer, // 应用的reducer, 必须传
-  initialState: {}, //redux store的初始状态，可选
-  afterCreateStore: function(store) {
-    //store创建后的回调 可以在这里把saga注册到redux中了，可选
-  },
-  middlewares: [] //redux中间件，放到数组里，可选
+  // 应用的reducer, 必须传
+  reducer,
+  // 应用挂载点，可以是querySelector的选择器，或者是dom节点， 可选，默认是#bsMain
+  el: '#bsMain',
+  //redux store的初始状态，可选
+  initialState: {},
+  //store创建后的回调 可以在这里把saga注册到redux中了，可选
+  afterCreateStore: function(store) {},
+  //redux中间件，放到数组里，可选,
+  middlewares: [],
+  //布局组件， 可选
+  layout: Layout,
+  //页面加载中显示的组件
+  loadingComp: props => <div>加载中啊</div>,
+  //应用报错时显示的组件
+  errorComp: props => <div>出错了呀</div>
 });
 
 app.start(); //启动应用
@@ -61,43 +70,43 @@ export default class Layout extends React.Component {
 
 项目的构建使用的@talentui/webpack-config，这是一个预置的的 webpack 配置，内置了一些常用的 loader 和 plugins，可以满足大部分情况下的项目构建任务。特殊场景可以通过一些参数来配置。
 同时也会通过一些参数，开关一些 loader 和 plugins，提升构建的性能。
-配置中的所有参数都有默认值，包括entry, 所以这些配置只是为了灵活性，不用有压力
+配置中的所有参数都有默认值，包括 entry, 所以这些配置只是为了灵活性，不用有压力
 
 ```js
 //一些常用参数介绍
 module.exports = require('@talentui/webpack-config')({
-    //应用程序入口
-  entry: './src/app.js', 
+  //应用程序入口
+  entry: './src/app.js',
   //应用使用的开发语言，ts | js
-  language: 'ts', 
+  language: 'ts',
   //webpack 配置中的publicPath
   publicPath: '',
   //是否抽离单独的css的文件
-  extractStyle: true, 
+  extractStyle: true,
   //是否拆分共用代码到单独的文件，包括vender, common, webpack-boostrap
-  useCommonChunk: true, 
+  useCommonChunk: true,
   // 是否启用babel的loose模式，
-  loose: true, 
+  loose: true,
   // 是否在处理样式文件时启用postCSS-loader，启用后会去项目根目录下找配置文件
-  poseCSS: false, 
+  poseCSS: false,
   //是否启用css-loader的modules模式
-  cssModule: false, 
+  cssModule: false,
   //definePlugins的参数
-  define: {}, 
+  define: {},
   //处理js\ts文件的白名单，如果设置，构建时babel-loader会处理白名单里的代码，不传的话默认排除node_moduels和bower_components目录里的文件
-  jsWhitelist: '', 
+  jsWhitelist: '',
   //webpack config alias
-  alias: {}, 
+  alias: {},
   //webpack config mode
-  mode: 'development', 
+  mode: 'development',
   //babel处理的时候需要用添加的plugins或presets
-  transformInclude: [], 
+  transformInclude: [],
   //babel-preset-env兼容性设置，可以按照项目情况修改具体参看：https://babeljs.io/docs/en/babel-preset-env#targets
   targets: {
     chrome: '45',
     edge: '14',
     ie: '10'
-  }, 
+  },
   //应用启动的端口
   port: 3000,
   //指定本地开发承载页的路径
@@ -105,10 +114,10 @@ module.exports = require('@talentui/webpack-config')({
 });
 ```
 
-##  启动应用
+## 启动应用
+
 ```sh
     npm i             #安装依赖
     npm run start     #运行项目
     npm run analysis  #运行代码分析
 ```
-    

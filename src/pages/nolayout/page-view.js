@@ -16,6 +16,9 @@ import { Link } from "react-router-dom";
     }
 )
 export default class Home extends Component {
+
+    static useLayout = false;
+
     componentDidMount() {
         this.counter = setInterval(() => {
             let { increase } = this.props;
@@ -30,12 +33,11 @@ export default class Home extends Component {
     render() {
         
         let { data } = this.props;
-        // if(data === 10) throw new Error('111')
         return (
             <div className="home-page">
                 <div>
                     <div> 你是否看到了时间的流失：{data} </div>
-                    <Link to="/home/love">爱自己，爱这个世界</Link>
+                    <Link to="/home">回到首页</Link>
                 </div>
             </div>
         );

@@ -16,6 +16,9 @@ export default class Header extends React.Component {
                     <li className="todos">
                         <Link to="/todos">todos</Link>
                     </li>
+                    <li className="todos">
+                        <Link to="/nolayout">不显示布局</Link>
+                    </li>
                     <li className="demo">
                         <Link to="/ts-todos">type script todos</Link>
                     </li>
