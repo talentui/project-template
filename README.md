@@ -140,8 +140,9 @@ module.exports = require('@talentui/webpack-config')({
 * **main-[hash].chunk.min.js** 项目的入口模块，从这里启动应用 [*]
 
 #### 异步模块 不用引入到承载页上，由应用运行时自动引入，加速应用启动速度
-* **xxx-page-view-[hash].chunk.min.js** 分离出来页面的样式，加载页面时会自动加载对应样式
-* **xxx-page-view.-[hash].min.css** 分离出来的页面的脚本，根据路由地址做对应的异步加载
+* **xxx-page-view.-[hash].min.css** 分离出来页面的样式，加载页面时会自动加载对应样式
+* **xxx-page-view-[hash].chunk.min.js**  分离出来的页面的脚本，根据路由地址做对应的异步加载
+
 
 ### 设置useCommonChunk为false
 此场景下构建不会对entry point进行拆分，所以正常配置下的entry point的js部分会合并成一个main.chunk.js，所以入口文件只有两个, 异步模块规则不变
