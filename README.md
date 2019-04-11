@@ -123,21 +123,27 @@ module.exports = require('@talentui/webpack-config')({
 ```
 
 ## 构建结果
-在webpack配置中有几个配置会影响到构建的结果，在把web应用的代码引入到页面上时候需要注意确认需要引入入口文件(entry point)。
+在webpack配置中有几个配置会影响到构建的结果，在把web应用的代码引入到页面上时候需要注意确认需要引入的入口文件(entry point)。
+
+```
+[注]：
+构建结果标为[?] 代表此文件需要满足条件才会生成，比如vender文件，需要项目引用了node_modules里的代码才会生成
+构建结果标为[*] 代表此文件肯定会生成
+```
 
 ### 正常配置下的构建结果
 #### Entry Point 列表顺序为引入顺序
-* **main.-[hash].min.css** 分离出来的样式文件
-* **webpack-bootstrap-[hash].chunk.min.js**  webpack的运行时文件，分离出来为了保证构建结果的稳定
-* **venders-[hash].chunk.min.js** 从node_modules中拆分出来非异步模块，拆分此chunk是为了更好的利用浏览器的缓存优势
-* **common-[hash].chunk.min.js** 多个页面共享的模块，拆分出来是为了减少整体项目的体积
-* **main-[hash].chunk.min.js** 项目的入口模块，从这里启动应用
+* **main.-[hash].min.css** 分离出来的样式文件 [?]
+* **webpack-bootstrap-[hash].chunk.min.js**  webpack的运行时文件，分离出来为了保证构建结果的稳定 [*]
+* **venders-[hash].chunk.min.js** 从node_modules中拆分出来非异步模块，拆分此chunk是为了更好的利用浏览器的缓存优势 [?]
+* **common-[hash].chunk.min.js** 多个页面共享的模块，拆分出来是为了减少整体项目的体积 [?]
+* **main-[hash].chunk.min.js** 项目的入口模块，从这里启动应用 [*]
 
 #### 异步模块 不用引入到承载页上，由应用运行时自动引入，加速应用启动速度
 * **xxx-page-view-[hash].chunk.min.js** 分离出来页面的样式，加载页面时会自动加载对应样式
 * **xxx-page-view.-[hash].min.css** 分离出来的页面的脚本，根据路由地址做对应的异步加载
 
-### 设计useCommonChunk为false
+### 设置useCommonChunk为false
 此场景下构建不会对entry point进行拆分，所以正常配置下的entry point的js部分会合并成一个main.chunk.js，所以入口文件只有两个, 异步模块规则不变
 * **main-[hash].min.css** 
 * **main-[hash].chunk.min.js** 
