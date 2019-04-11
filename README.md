@@ -90,13 +90,13 @@ module.exports = require('@talentui/webpack-config')({
   //webpack 配置中的publicPath
   publicPath: '',
   //是否抽离单独的css的文件
-  extractStyle: true,
+  extractStyles: true,
   //是否拆分共用代码到单独的文件，包括vender, common, webpack-boostrap
   useCommonChunk: true,
   // 是否启用babel的loose模式，
   loose: true,
   // 是否在处理样式文件时启用postCSS-loader，启用后会去项目根目录下找配置文件
-  poseCSS: false,
+  postCSS: false,
   //是否启用css-loader的modules模式
   cssModule: false,
   //definePlugins的参数
@@ -133,7 +133,7 @@ module.exports = require('@talentui/webpack-config')({
 
 ### 正常配置下的构建结果
 #### Entry Point 列表顺序为引入顺序
-* **main.-[hash].min.css** 分离出来的样式文件 [?]
+* **main-[hash].min.css** 分离出来的样式文件 [?]
 * **webpack-bootstrap-[hash].chunk.min.js**  webpack的运行时文件，分离出来为了保证构建结果的稳定 [*]
 * **venders-[hash].chunk.min.js** 从node_modules中拆分出来非异步模块，拆分此chunk是为了更好的利用浏览器的缓存优势 [?]
 * **common-[hash].chunk.min.js** 多个页面共享的模块，拆分出来是为了减少整体项目的体积 [?]
@@ -149,7 +149,7 @@ module.exports = require('@talentui/webpack-config')({
 * **main-[hash].min.css** 
 * **main-[hash].chunk.min.js** 
 
-### 设置extractStyle 为false
+### 设置extractStyles 为false
 此场景下的构建不会对样式进行分离，而是会合并到js文件中，所以entry point的全部代码会合并到main.chunk.js, 所以入口文件只有一个，异步模块规则不变
 * **main-[hash].chunk.min.js**
 
