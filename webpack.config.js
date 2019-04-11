@@ -1,4 +1,5 @@
 module.exports = require('@talentui/webpack-config')({
     entry: './src/app.js', 
-    language: 'ts'
+    language: 'ts',
+    projectType: 'module'
 })

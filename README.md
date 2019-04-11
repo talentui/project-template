@@ -122,6 +122,35 @@ module.exports = require('@talentui/webpack-config')({
 });
 ```
 
+## 构建结果
+在webpack配置中有几个配置会影响到构建的结果，在把web应用的代码引入到页面上时候需要注意确认需要引入入口文件(entry point)。
+
+### 正常配置下的构建结果
+#### Entry Point 列表顺序为引入顺序
+* main.-[hash].min.css 分离出来的样式文件
+* webpack-bootstrap-[hash].chunk.min.js  webpack的运行时文件，分离出来为了保证构建结果的稳定
+* venders-[hash].chunk.min.js 从node_modules中拆分出来非异步模块，拆分此chunk是为了更好的利用浏览器的缓存优势
+* common-[hash].chunk.min.js 多个页面共享的模块，拆分出来是为了减少整体项目的体积
+* main-[hash].chunk.min.js 项目的入口模块，从这里启动应用
+
+#### 异步模块 不用引入到承载页上，由应用运行时自动引入，加速应用启动速度
+* xxx-page-view-[hash].chunk.min.js 
+* xxx-page-view.-[hash].min.css
+
+### 设计useCommonChunk为false
+此场景下构建不会对entry point进行拆分，所以正常配置下的entry point的js部分会合并成一个main.chunk.js，所以入口文件只有两个, 异步模块规则不变
+* main-[hash].min.css 分离出来的样式
+* main-[hash].chunk.min.js
+
+### 设置extractStyle 为false
+此场景下的构建不会对样式进行分离，而是会合并到js文件中，所以entry point的全部代码会合并到main.chunk.js, 所以入口文件只有一个，异步模块规则不变
+* main-[hash].chunk.min.js
+
+### 设置projectType为 'moudle'
+此场景下的构建不会对entry point的js部分进行拆分，会构建成一个main.js, 但是构建结果将会用版本号代替hash, 版本号来自package.json中的version
+* main-[version].min.js
+
+
 ## 启动应用
 
 ```sh
