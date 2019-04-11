@@ -19,7 +19,15 @@ app.config({
   //页面加载中显示的组件
   loadingComp: props => <div>加载中啊</div>,
   //应用报错时显示的组件
-  errorComp: props => <div>出错了呀</div>
+  errorComp: props => {
+    return (
+      <div>
+        <p style={{ color: 'red' }}>
+          <pre>{props.error.stack}</pre>
+        </p>
+      </div>
+    );
+  }
 });
 
 app.start(); //启动应用

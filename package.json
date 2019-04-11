@@ -26,7 +26,7 @@
   "dependencies": {
     "@babel/runtime": "^7.4.3",
     "@talentui/biz-helper": "^2.0.0",
-    "@talentui/bootstrap-react": "^2.1.1",
+    "@talentui/bootstrap-react": "^2.1.2",
     "core-js": "^2.6.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -37,7 +37,8 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "@talentui/webpack-config": "^4.1.2-beta.5",
+    "@talentui/get-babel-config": "^4.0.7",
+    "@talentui/webpack-config": "^4.1.2-beta.8",
     "@types/react": "^16.8.13",
     "@types/react-dom": "^16.8.3",
     "@types/react-redux": "^6.0.2",
